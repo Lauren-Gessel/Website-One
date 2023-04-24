@@ -18,25 +18,194 @@
      img{
         border:2px solid rgb(42, 197, 181);
         
-     }
-     div {
+     } 
+      /*div {
             font-size:40px;
             color:whitesmoke;
         text-align:center;
         background-color:rgb(42, 197, 181);
         margin-left:40%;
         margin-right:40%;
-    }
-      </style>
+     } */
+     .image__container{
+        max-width: 100%;
+    height: 100%;
+    margin: 32px auto;
+    display: flex;
+    margin-left:10%;
+    margin-right:10%;
+     }
+     .imaget__container{
+        max-width: 1000px;
+    height: 100%;
+    margin: 32px auto;
+    display: flex;
+    border: 5px solid #762d2d;
+
+     }
+     .image {
+	position: relative;
+	width: 400px;
+}
+
+.image__img {
+	display: block;
+	width: 100%;
+}
+
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+	backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+	background: #000000a4;
+}
+
+.image__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+	opacity: 1;
+}
+
+.image__overlay:hover>* {
+	transform: translateY(0);
+}
+
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.image__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+    margin-left: 1.25em;
+}
+  
+   
+
+ </style>
       <!-- Fix up the gallery, make it look better, add works? add descriptions?-->
 </head>
 <body>
     <a href="./index.html"><img style="border:none" src="./pictures/bobross.PNG" alt="Bob Ross" width="5%" height="5%"></a>
     <div > The Gallery </div>
-    <pre>           <img src="./pictures/ania.jpeg" alt="Ania" width="20%" height="20%">       <img src="./pictures/two.jpeg" alt="Two" width="20%" height="20%">      <img src="./pictures/green.jpeg" alt="Green" width="20%" height="20%">        <img src="./pictures/birds.jpeg" alt="Birds" width="20%" height="20%">
+    <div class="image__container">
+    <div class="image">
+		<img class="image__img" src="./pictures/ania.jpeg" alt="Bricks">
+		<div class="image__overlay image__overlay--primary">
+			<div class="image__title">Ania</div>
+			<p class="image__description">
+				This work features a character that I designed and the format is meant to resemble a royal portrait.
+			</p>
+		</div>
+	</div>
+  <div class="image">
+		<img class="image__img" src="./pictures/two.jpeg" alt="Ania">
+		<div class="image__overlay image__overlay--primary">
+			<div class="image__title">Split</div>
+			<p class="image__description">
+				This work is meant to represent the progress of time with a representation of my face 4 years apart.
+			</p>
+		</div> 
+</div>
+<div class="image">
+    <img class="image__img" src="./pictures/green.jpeg" alt="Green">
+    <div class="image__overlay image__overlay--primary">
+        <div class="image__title">Green</div>
+        <p class="image__description">
+            This sculpture is made out of paper and glue formed around tinfoil to make a disgusting and eerie shape. 
+            It is a work on form and structure.
+        </p>
+    </div> 
+</div>
+</div>
+
+<div class="image__container">
+    <div class="image">
+		<img class="image__img" src="./pictures/nesting.jpeg" alt="nesting">
+		<div class="image__overlay image__overlay--primary">
+			<div class="image__title">Nesting</div>
+			<p class="image__description">
+				Made with charoal and graphite, this peice is meant to represent complex emotions through a russian nesting doll type appearance. Each layer comes with a new level of emotions.
+			</p>
+		</div>
+	</div>
+  <div class="image">
+		<img class="image__img" src="./pictures/room.jpeg" alt="Bedroom">
+		<div class="image__overlay image__overlay--primary">
+			<div class="image__title">Room</div>
+			<p class="image__description">
+                This is a part of a series and is meant to represent a moment in ones life, in how a room appears and can represent the life of the person who lives there. Its a reminder of moments.
+			</p>
+		</div> 
+</div>
+<div class="image">
+    <img class="image__img" src="./pictures/dorm.jpeg" alt="Dorm">
+    <div class="image__overlay image__overlay--primary">
+        <div class="image__title">Green</div>
+        <p class="image__description">
+            This is the second part of the series which features a dorm room in contrast to a childhood room. With a few items transending between.
+        </p>
+    </div> 
+</div>
+</div>
+    
+<div class="image__container">
+    <div class="image">
+		<img class="image__img" src="./pictures/education.jpeg" alt="Education">
+		<div class="image__overlay image__overlay--primary">
+			<div class="image__title">Education</div>
+			<p class="image__description">
+				This collage is meant to represent the stress and toll that schoolwork can take on an individual. Test anxiety and a need for self expression strung together.
+			</p>
+		</div>
+	</div>
+  <div class="image">
+		<img class="image__img" src="./pictures/dance.jpeg" alt="Dancing Girl">
+		<div class="image__overlay image__overlay--primary">
+			<div class="image__title">Dancing Girl</div>
+			<p class="image__description">
+                This is a character that I designed, fully realized in her own action portrait.
+			</p>
+		</div> 
+</div>
+<div class="image">
+    <img class="image__img" src="./pictures/octo.jpeg" alt="Octopus">
+    <div class="image__overlay image__overlay--primary">
+        <div class="image__title">Octopus</div>
+        <p class="image__description">
+            This work includes some of my 3d Modeling, this octopus is meant to be a sci-fi idea for a helpful brain robot that keeps the neurons healthy.
+        </p>
+    </div> 
+</div>
+</div>
+
+    <!--<pre>           <img src="./pictures/ania.jpeg" alt="Ania" width="20%" height="20%">       <img src="./pictures/two.jpeg" alt="Two" width="20%" height="20%">      <img src="./pictures/green.jpeg" alt="Green" width="20%" height="20%">        <img src="./pictures/birds.jpeg" alt="Birds" width="20%" height="20%">
 
             <img src="./pictures/nesting.jpeg" alt="Nesting" width="20%" height="20%">     <img src="./pictures/room.jpeg" alt="Room" width="20%" height="20%">        <img src="./pictures/dorm.jpeg" alt="Dorm" width="20%" height="20%">     <img src="./pictures/stare.jpeg" alt="Stare" width="20%" height="20%">       
 
             <img src="./pictures/education.jpeg" alt="Education" width="20%" height="20%">      <img src="./pictures/dance.jpeg" alt="Dancing" width="20%" height="20%">        <img src="./pictures/octo.jpeg" alt="Octopus" width="40%" height="40%"></pre>
-</body>
+//-->
+        </body>
 </html>

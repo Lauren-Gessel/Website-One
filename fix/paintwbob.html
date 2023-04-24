@@ -17,13 +17,16 @@
     
 }
  a{
-    background: #202020;
+    background: #fe8c7a;
     display: flex;
+ }
+ img{
+    margin-top: 3px;
  }
 h1{
     background: #4b6043;
-    background: -webkit-linear-gradient(to right, #74b72e, #aef359, #466d1d );
-    background: linear-gradient(to right, #74b72e, #aef359, #466d1d );
+    background: -webkit-linear-gradient(to right, #74b72e, #466d1d );
+    background: linear-gradient(to right, #74b72e, #466d1d );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,7 +42,7 @@ h1{
     flex-direction: column;
     padding: 10px;
     width: 70 px;
-    background-color: #202020;
+    background-color: #fe8c7a;
 }
 #toolbar * {
     margin-bottom: 6px;
@@ -57,6 +60,34 @@ h1{
     color: white;
     padding:2px;
 }
+
+.speech {
+   font-size: 1.1em;
+ 
+  color: #fff;
+  background: #a53d38;
+ 
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 150px;
+}
+
+.speech::after {
+  content: "";
+  border: 20px solid transparent;
+  position: absolute;
+}
+
+.top.speech::after {
+  border-bottom-color: #a53d38;
+  border-top: 0;
+ 
+  top: -20px; left: 50%;
+  margin-left: -20px;
+}
+ 
     </style>
 </head>
 <body>
@@ -65,18 +96,25 @@ h1{
     <section class="container">
         <div id="toolbar">
             
-                <h1>Draw With Bob!</h1>
+                <h1>Paint With Bob!</h1>
             <label for="stroke">Color</label>
             <input id="stroke" name='stroke' type="color">
             <label for="lineWidth"> Line Size</label>
             <input id="lineWidth" name='lineWidth' type="number" value="5">
             <button id="clear">Clear</button>
-            <img src="/pictures/standing.png"alt="StandingBobross">
-        </div>
+        <img src="/pictures/standing.png"alt="Standing Bob ross" width="200px" height="200px" >
+        <div id="test" class="speech top">
+             There are no such things as mistakes, only happy accidents!
+          </div>
+          
+    </div> 
+       
         <div class="drawing-board">
             <canvas id="drawing-board"></canvas>
         </div>
+        
     </section>
+   
     <script src="./index.js"></script>
 
 </body>
